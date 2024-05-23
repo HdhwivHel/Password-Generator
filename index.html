@@ -4,28 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <script src="pass.js"></script>
 
-    <table style="margin-left: 110px;">
-        <tr>
-            <br>
-            <br>
-          <td class="sr">Length of Password:</td>
-          <td>
-            <input style="width: 235px" id="length" />
-          </td>
-        </tr>
-    </table>
+    <div class="container">
+        <h1>Password Generator</h1>
+        <table>
+            <tr>
+                <td class="label">Length of Password:</td>
+                <td>
+                    <input type="number" id="length" />
+                </td>
+            </tr>
+        </table>
 
-    <br>
-    <input type="checkbox" style="margin-left: 250px;" id="spch">Include Special Characters</input><br>
-    <input type="checkbox" style="margin-left: 250px;" id="num">Include Numbers</input><br>
-    <input type="checkbox" style="margin-left: 250px;" id = "alph">Include Alphabets</input><br>
-</br>
-    <div><button class="passgen" onclick="passGenerate()" style="margin-left: 250px; height: 30px; border-radius: 10px;">Generate Password</button></div>
+        <div class="checkbox-group">
+            <input type="checkbox" id="spch" checked>
+            <label for="spch">Include Special Characters</label>
+            <br>
+            <input type="checkbox" id="num" checked>
+            <label for="num">Include Numbers</label>
+            <br>
+            <input type="checkbox" id="alph" checked>
+            <label for="alph">Include Alphabets</label>
+        </div>
 
+        <button class="passgen" onclick="passGenerate()">Generate Password</button>
+    </div>
 </body>
 </html>
